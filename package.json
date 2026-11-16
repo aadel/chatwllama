@@ -1,0 +1,71 @@
+{
+  "name": "chatwllama",
+  "version": "0.1.0",
+  "description": "Wllama integration for LangChain.js",
+  "keywords": [
+    "ai",
+    "browser",
+    "embeddings",
+    "generation",
+    "langchainjs",
+    "llama",
+    "llm",
+    "wasm",
+    "webassembly",
+    "webgpu",
+    "wllama"
+  ],
+  "homepage": "https://github.com/aadel/chatwllama#readme",
+  "bugs": {
+    "url": "https://github.com/aadel/chatwllama/issues"
+  },
+  "license": "MIT",
+  "author": "Ahmed Adel",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aadel/chatwllama.git"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "default": "./dist/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "vp pack",
+    "dev": "vp pack --watch",
+    "test": "vp test",
+    "check": "vp check",
+    "prepublishOnly": "vp run build"
+  },
+  "dependencies": {
+    "@langchain/core": "^1.2.9",
+    "@wllama/wllama": "^3.8.1",
+    "langchain": "^1.5.10",
+    "tslog": "^5.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "typescript": "^7.0.2",
+    "vite": "catalog:",
+    "vite-plus": "catalog:"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.18.0",
+      "onFail": "download"
+    }
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
